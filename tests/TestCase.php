@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests;
+namespace Rahulmac\Curspell\Tests;
 
 use PHPUnit\Framework\TestCase as BaseTestCase;
 

@@ -4,11 +4,13 @@ Curspell (short for currency speller) is a PHP package to spell out currency amo
 
 # Installation
 
-> composer require rahulmac/curspell
+```bash
+composer require rahulmac/curspell
+```
 
 # Prerequisites
 
-- PHP v8+
+- PHP v8.0+
 - The `intl` extension
 
 # Usage
@@ -33,7 +35,7 @@ You can change the currency code and locale of your choice.
 ```php
 use Rahulmac\Curspell\Curspell;
 
-echo (new Curspell())->setCode('INR')->spell(123.456);    // one hundred twenty-three rupees and four hundred fifty-six paise
+echo (new Curspell())->setCode('INR')->setLocale('en_IN')->spell(123.456);    // one hundred twenty-three rupees and four hundred fifty-six paise
 ```
 
 ## Static Helper
@@ -41,10 +43,15 @@ echo (new Curspell())->setCode('INR')->spell(123.456);    // one hundred twenty-
 Alternatively, you can use the static helper class.
 
 ```php
-use Rahulmac\Curspell\Helpers\Curspell;
+use Rahulmac\Curspell\Helpers\EnCurspell;
 
-echo Curspell::gbp(123.456);    // one hundred twenty-three pounds and four hundred fifty-six pence
+echo EnCurspell::gbp(123.456);    // one hundred twenty-three pounds and four hundred fifty-six pence
 ```
+
+# Supported Currencies
+
+Here is the list of the currencies this package supports.
+
 # License
 
 Curspell is open-sourced software licensed under the MIT license.

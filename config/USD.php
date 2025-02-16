@@ -1,7 +1,7 @@
 <?php
 
 /**
- * United States of America Currency Map
+ * United States Dollar Map
  */
 return [
     'en_US' => [

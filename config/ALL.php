@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Albanian Currency Map
+ * Albanian Lek Map
  */
 return [
     'en' => [

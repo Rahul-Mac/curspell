@@ -2,12 +2,17 @@
     "name": "rahulmac/curspell",
     "description": "A package to spell currency amounts",
     "type": "library",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "license": "MIT",
     "autoload": {
         "psr-4": {
             "Rahulmac\\Curspell\\": "src/",
-            "Tests\\": "tests/"
+            "Rahulmac\\Curspell\\Config\\": "config/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rahulmac\\Curspell\\Tests\\": "tests/"
         }
     },
     "authors": [

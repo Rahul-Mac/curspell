@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Indian Currency Map
+ * Indian Rupee Map
  */
 return [
     'en_IN' => [

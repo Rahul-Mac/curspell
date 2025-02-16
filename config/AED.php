@@ -1,7 +1,7 @@
 <?php
 
 /**
- * United Arab Emirates Currency Map
+ * United Arab Emirates Dirham Map
  */
 return [
     'en' => [

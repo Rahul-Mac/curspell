@@ -1,10 +1,10 @@
 <?php
 
-namespace Tests\Unit;
+namespace Rahulmac\Curspell\Tests\Unit;
 
-use Tests\TestCase;
 use ReflectionClass;
 use Rahulmac\Curspell\Curspell;
+use Rahulmac\Curspell\Tests\TestCase;
 use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
 
 final class CurspellTest extends TestCase

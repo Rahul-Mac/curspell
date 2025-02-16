@@ -47,7 +47,7 @@ final class Configuration
     /**
      * Return the base based on the amount
      */
-    public function getBase(float $amount): string
+    public function getBase(int $amount): string
     {
         return $this->getUnit($amount, 'base');
     }
@@ -55,7 +55,7 @@ final class Configuration
     /**
      * Return the fraction based on the amount
      */
-    public function getFraction(float $amount): string
+    public function getFraction(int $amount): string
     {
         return $this->getUnit($amount, 'fraction');
     }
@@ -63,9 +63,9 @@ final class Configuration
     /**
      * Return the unit value
      */
-    public function getUnit(float $amount, string $unit): string
+    public function getUnit(int $amount, string $unit): string
     {
-        $grammaticalNumber = $amount === 1.0 ? 'singular' : 'plural';
+        $grammaticalNumber = $amount === 1 ? 'singular' : 'plural';
 
         return $this->currency[$this->locale][$unit][$grammaticalNumber];
     }

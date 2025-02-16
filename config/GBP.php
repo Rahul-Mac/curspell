@@ -1,7 +1,7 @@
 <?php
 
 /**
- * United Kingdom Currency Map
+ * Pound Sterling Map
  */
 return [
     'en_GB' => [

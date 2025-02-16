@@ -2,10 +2,10 @@
 
 namespace Rahulmac\Curspell\Helpers;
 
-use Rahulmac\Curspell\Curspell as CurrencySpeller;
+use Rahulmac\Curspell\Curspell;
 
 /**
- * Static helper class for Curspell
+ * Static helper class for spelling the currency amounts in the English language
  * 
  * @package Curspell
  * 
@@ -15,14 +15,22 @@ use Rahulmac\Curspell\Curspell as CurrencySpeller;
  * 
  * @license https://opensource.org/licenses/MIT MIT License
  */
-final class Curspell
+final class EnCurspell
 {
     /**
      * Spell the amount as United Arab Emirates Dirham
      */
     public static function aed(mixed $amount): string
     {
-        return static::spell($amount, 'AED', 'en');
+        return static::spell($amount, 'AED');
+    }
+
+    /**
+     * Spell the amount as United Arab Emirates Dirham
+     */
+    public static function afn(mixed $amount): string
+    {
+        return static::spell($amount, 'AFN');
     }
 
     /**
@@ -30,7 +38,7 @@ final class Curspell
      */
     public static function all(mixed $amount): string
     {
-        return static::spell($amount, 'ALL', 'en');
+        return static::spell($amount, 'ALL');
     }
 
     /**
@@ -46,7 +54,7 @@ final class Curspell
      */
     public static function usd(mixed $amount): string
     {
-        return (new CurrencySpeller())->spell($amount);
+        return (new Curspell())->spell($amount);
     }
 
     /**
@@ -57,8 +65,16 @@ final class Curspell
         return static::spell($amount, 'GBP', 'en_GB');
     }
 
-    private static function spell(mixed $amount, string $code, string $locale): string
+    /**
+     * Spell the amount as Euro
+     */
+    public static function eur(mixed $amount): string
     {
-        return (new CurrencySpeller())->setCode($code)->setLocale($locale)->spell($amount);
+        return static::spell($amount, 'EUR');
+    }
+
+    private static function spell(mixed $amount, string $code, string $locale= 'en'): string
+    {
+        return (new Curspell())->setCode($code)->setLocale($locale)->spell($amount);
     }
 }

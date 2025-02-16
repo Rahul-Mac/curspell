@@ -66,14 +66,14 @@ final class Curspell
 
         $numberFormatter = new NumberFormatter($this->locale, NumberFormatter::SPELLOUT);
     
-        $base = floatval($parts[0]);
+        $base = intval($parts[0]);
 
         $result = $numberFormatter->format($base) . ' ' . $config->getBase($base);
 
         if (key_exists(1, $parts)) {
-            $fraction = floatval($parts[1]);
+            $fraction = intval($parts[1]);
             
-            if ($fraction !== 0.0) {
+            if ($fraction !== 0) {
                 $result .= ' ' . $config->getConjunction() . ' ' . $numberFormatter->format($fraction)  . ' ' . $config->getFraction($fraction);
             }
         }
