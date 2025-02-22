@@ -40,7 +40,7 @@ echo (new Curspell())->setCode('INR')->setLocale('en_IN')->spell(123.456);    //
 
 # Supported Currencies
 
-Here is the list of the [currencies](/docs/SUPPORTED_CURRENCIES.md) this package supports.
+Here is the list of the [currencies](/docs/CURRENCY_LOCALE.md) this package supports.
 
 # License
 
