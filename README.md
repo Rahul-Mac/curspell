@@ -1,3 +1,5 @@
+![Curspell](/assets/curspell.png)
+
 # Curspell
 
 Curspell (short for currency speller) is a PHP package to spell out currency amounts.
@@ -17,7 +19,9 @@ composer require rahulmac/curspell
 
 ## Basic Usage
 
-Simply create an object and invoke `spell()` with the amount. By default, it uses `USD` as the currency code and `en_US` as the locale.
+Simply create an object and invoke `spell()` with the amount.
+
+> By default, it uses `USD` as the currency code and `en_US` as the locale.
 
 ```php
 use Rahulmac\Curspell\Curspell;

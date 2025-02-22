@@ -23,6 +23,17 @@ As of now, the currency amounts can be spelt in the English language only. So th
 | Bahraini Dinar                          | BHD      | `en`      |
 | Burundian Franc                         | BIF      | `en`      |
 | Bermudian Dollar	                      | BMD      | `en`      |
+| Brunei Dollar                           | BND      | `en`      |
+| Bolivian Boliviano                      | BOB      | `en`      |
+| Brazilian Real	                      | BRL      | `en`      |
+| Bahamian Dollar	                      | BSD      | `en`      |
+| Bhutanese Ngultrum	                  | BTN      | `en`      |
+| Botswana Pula	                          | BWP      | `en`      |
+| Belarusian Ruble   	                  | BYN      | `en`      |
+| Belize Dollar     	                  | BZD      | `en`      |
+| Canadian Dollar    	                  | CAD      | `en_CA`   |
+| Congolese Franc   	                  | CDF      | `en`      |
+| Swiss Franc       	                  | CHF      | `en`      |
 | Euro                                    | EUR      | `en`      |
 | Pound Sterling                          | GBP      | `en_GB`   |
 | Indian Rupee                            | INR      | `en_IN`   |
