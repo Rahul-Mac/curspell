@@ -53,6 +53,11 @@ final class CurspellTest extends TestCase
         $this->assertEquals('one hundred twenty-three dollars', $this->curspell->setCode('USD')->setLocale('en_US')->spell(123.00));
     }
 
+    public function testSpellWithZeroBase(): void
+    {
+        $this->assertEquals('twelve paise', $this->curspell->setCode('INR')->setLocale('en_IN')->spell(0.12));
+    }
+
     public function testSpellNegativeAmount(): void
     {
         $this->assertEquals('minus one hundred twenty-three dollars and forty-five cents', $this->curspell->setCode('USD')->setLocale('en_US')->spell(-123.45));
@@ -61,6 +66,11 @@ final class CurspellTest extends TestCase
     public function testSpellDifferentCurrencyandLocale(): void
     {        
         $this->assertEquals('ninety-nine pounds and ninety-nine pence', $this->curspell->setCode('GBP')->setLocale('en_GB')->spell(99.99));
+    }
+
+    public function testSpellZero(): void
+    {
+        $this->assertEquals('', $this->curspell->spell(0));
     }
 
     public function testUnknownCurrency(): void

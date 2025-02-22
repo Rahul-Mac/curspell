@@ -38,20 +38,10 @@ use Rahulmac\Curspell\Curspell;
 echo (new Curspell())->setCode('INR')->setLocale('en_IN')->spell(123.456);    // one hundred twenty-three rupees and four hundred fifty-six paise
 ```
 
-## Static Helper
-
-Alternatively, you can use the static helper class.
-
-```php
-use Rahulmac\Curspell\Helpers\EnCurspell;
-
-echo EnCurspell::gbp(123.456);    // one hundred twenty-three pounds and four hundred fifty-six pence
-```
-
 # Supported Currencies
 
-Here is the list of the currencies this package supports.
+Here is the list of the [currencies](/docs/SUPPORTED_CURRENCIES.md) this package supports.
 
 # License
 
-Curspell is open-sourced software licensed under the MIT license.
+Curspell is open-sourced software licensed under the [MIT license](LICENSE).

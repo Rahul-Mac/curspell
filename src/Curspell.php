@@ -68,13 +68,18 @@ final class Curspell
     
         $base = intval($parts[0]);
 
-        $result = $numberFormatter->format($base) . ' ' . $config->getBase($base);
+        $result = $conjunction = '';
+
+        if ($base !== 0) {
+            $result = $numberFormatter->format($base) . ' ' . $config->getBase($base);
+            $conjunction = ' ' . $config->getConjunction() . ' ';
+        }
 
         if (key_exists(1, $parts)) {
             $fraction = intval($parts[1]);
             
             if ($fraction !== 0) {
-                $result .= ' ' . $config->getConjunction() . ' ' . $numberFormatter->format($fraction)  . ' ' . $config->getFraction($fraction);
+                $result .= $conjunction . $numberFormatter->format($fraction)  . ' ' . $config->getFraction($fraction);
             }
         }
         
