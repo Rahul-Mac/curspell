@@ -34,6 +34,11 @@ As of now, the currency amounts can be spelt in the English language only. So th
 | Canadian Dollar    	                  | CAD      | `en_CA`   |
 | Congolese Franc   	                  | CDF      | `en`      |
 | Swiss Franc       	                  | CHF      | `en`      |
+| Chilean Peso       	                  | CLP      | `en`      |
+| Chinese Yuan      	                  | CNY      | `en`      |
+| Colombian Peso       	                  | COP      | `en`      |
+| Costa Rican Colón                       | CRC      | `en`      |
+| Cuban Peso         	                  | CUP      | `en`      |
 | Euro                                    | EUR      | `en`      |
 | Pound Sterling                          | GBP      | `en_GB`   |
 | Indian Rupee                            | INR      | `en_IN`   |
