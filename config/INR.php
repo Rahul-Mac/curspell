@@ -4,6 +4,7 @@
  * Indian Rupee Map
  */
 return [
+    'subunit' => 100,
     'en_IN' => [
         'base' => [
             'singular' => 'rupee',

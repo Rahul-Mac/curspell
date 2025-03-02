@@ -8,8 +8,6 @@ use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
 /**
  * Configuration
  * 
- * @package Curspell
- * 
  * @author Rahul Mac <rahulmacwan14@gmail.com>
  * 
  * @copyright (c) 2025
@@ -76,6 +74,11 @@ final class Configuration
     public function getConjunction(): string
     {
         return $this->currency[$this->locale]['conjunction'];
+    }
+
+    public function getSubunit(): int
+    {
+        return key_exists('subunit', $this->currency) ? $this->currency['subunit'] : 100;
     }
 }
 

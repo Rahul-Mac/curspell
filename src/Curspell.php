@@ -10,8 +10,6 @@ use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
 /**
  * Currency Speller
  * 
- * @package Curspell
- * 
  * @author Rahul Mac <rahulmacwan14@gmail.com>
  * 
  * @copyright (c) 2025
@@ -58,29 +56,31 @@ final class Curspell
      */
     public function spell(mixed $amount): string
     {
-        $amount = strval($amount);
+        $amount = floatval($amount);
+        $result = $conjunction = '';
 
-        $parts = explode('.', $amount);
+        if ($amount === 0.0) {
+            return $result;
+        }
+
+        $base = $amount < 0 ? ceil($amount) : floor($amount);
+        $fraction = abs($amount - $base);
 
         $config = new Configuration($this->code, $this->locale);
 
         $numberFormatter = new NumberFormatter($this->locale, NumberFormatter::SPELLOUT);
     
-        $base = intval($parts[0]);
-
-        $result = $conjunction = '';
-
-        if ($base !== 0) {
+        if ($base !== 0.0) {
             $result = $numberFormatter->format($base) . ' ' . $config->getBase($base);
+            // A scenario may occur where the base is 0 but the fraction exist. (Eg. $0.2)
+            // If we render the conjunction while spelling the fraction it will display 
+            // "and twenty cents" which is incorrect. It should be "twenty cents".
             $conjunction = ' ' . $config->getConjunction() . ' ';
         }
 
-        if (key_exists(1, $parts)) {
-            $fraction = intval($parts[1]);
-            
-            if ($fraction !== 0) {
-                $result .= $conjunction . $numberFormatter->format($fraction)  . ' ' . $config->getFraction($fraction);
-            }
+        if ($fraction !== 0.0) {
+            $fraction = round($fraction, 2) * $config->getSubunit();
+            $result .= $conjunction . $numberFormatter->format($fraction)  . ' ' . $config->getFraction($fraction);
         }
         
         return $result;

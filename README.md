@@ -26,7 +26,7 @@ Simply create an object and invoke `spell()` with the amount.
 ```php
 use Rahulmac\Curspell\Curspell;
 
-echo (new Curspell())->spell(123.456);    // one hundred twenty-three dollars and four hundred fifty-six cents
+echo (new Curspell())->spell(123.45);    // one hundred twenty-three dollars and forty-five cents
 ```
 
 ## Currency Code and Locale
@@ -39,7 +39,7 @@ You can change the currency code and locale of your choice.
 ```php
 use Rahulmac\Curspell\Curspell;
 
-echo (new Curspell())->setCode('INR')->setLocale('en_IN')->spell(123.456);    // one hundred twenty-three rupees and four hundred fifty-six paise
+echo (new Curspell())->setCode('INR')->setLocale('en_IN')->spell(123.45);    // one hundred twenty-three rupees and forty-five paise
 ```
 
 # Supported Currencies
