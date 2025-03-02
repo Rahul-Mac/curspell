@@ -4,6 +4,7 @@
  * Bahraini Dinar Map
  */
 return [
+    'subunit' => 1000,
     'en' => [
         'base' => [
             'singular' => 'dinar',

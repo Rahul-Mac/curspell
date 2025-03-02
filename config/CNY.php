@@ -4,6 +4,7 @@
  * Chinese Yuan Map
  */
 return [
+    'subunit' => 10,
     'en' => [
         'base' => [
             'singular' => 'yuan',

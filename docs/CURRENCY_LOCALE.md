@@ -39,6 +39,10 @@ As of now, the currency amounts can be spelt in the English language only. So th
 | Colombian Peso       	                  | COP      | `en`      |
 | Costa Rican Colón                       | CRC      | `en`      |
 | Cuban Peso         	                  | CUP      | `en`      |
+| Cape Verdean Escudo                     | CVE      | `en`      |
+| Czech Koruna                            | CZK      | `en`      |
+| Djiboutian Franc                        | DJF      | `en`      |
+| Danish Krone                            | DKK      | `en`      |
 | Euro                                    | EUR      | `en`      |
 | Pound Sterling                          | GBP      | `en_GB`   |
 | Indian Rupee                            | INR      | `en_IN`   |

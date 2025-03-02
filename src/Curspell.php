@@ -64,6 +64,7 @@ final class Curspell
         }
 
         $base = $amount < 0 ? ceil($amount) : floor($amount);
+        // Return the absolute value as the sign of the fraction doesn't matter
         $fraction = abs($amount - $base);
 
         $config = new Configuration($this->code, $this->locale);
@@ -79,10 +80,23 @@ final class Curspell
         }
 
         if ($fraction !== 0.0) {
-            $fraction = round($fraction, 2) * $config->getSubunit();
+            $subunit = $config->getSubunit();
+            $fraction = round($fraction, $this->getPrecision($subunit)) * $subunit;
             $result .= $conjunction . $numberFormatter->format($fraction)  . ' ' . $config->getFraction($fraction);
         }
         
         return $result;
+    }
+
+    /**
+     * Return the number of digits to round to based on the subunit.
+     * 
+     * The precision should be one less than the number of digits of the subunit
+     * 
+     * Eg: A subunit of 100 should have a precision of 2.
+     */
+    private function getPrecision(int $subunit): int
+    {
+        return $subunit !== 0 ? floor(log10($subunit)) : 0;
     }
 }
