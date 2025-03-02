@@ -29,7 +29,7 @@ final class Configuration
      */
     public function __construct(string $code, private string $locale)
     {
-        $file = __DIR__ . "\\$code.php";
+        $file = __DIR__ . "/$code.php";
 
         if (! file_exists($file)) {
             throw new UnknownCurrencyCodeException("The following currency code is not supported or is invalid: {$code}");
