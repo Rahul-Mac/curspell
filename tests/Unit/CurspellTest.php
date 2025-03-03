@@ -79,4 +79,9 @@ final class CurspellTest extends TestCase
 
         $this->curspell->setCode('ABC')->spell(100);    
     }
+
+    public function testSpellWithDifferentSubunit(): void
+    {
+        $this->assertEquals('two hundred dinar and four hundred fils', $this->curspell->setCode('BHD')->setLocale('en')->spell(200.4));
+    }
 }
