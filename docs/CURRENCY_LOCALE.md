@@ -43,6 +43,9 @@ As of now, the currency amounts can be spelt in the English language only. So th
 | Czech Koruna                            | CZK      | `en`      |
 | Djiboutian Franc                        | DJF      | `en`      |
 | Danish Krone                            | DKK      | `en`      |
+| Dominican Peso                          | DOP      | `en`      |
+| Algerian Dinar                          | DZD      | `en`      |
+| Egyptian Pound                          | EGP      | `en`      |
 | Euro                                    | EUR      | `en`      |
 | Pound Sterling                          | GBP      | `en_GB`   |
 | Indian Rupee                            | INR      | `en_IN`   |
