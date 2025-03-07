@@ -1,6 +1,6 @@
 name: Apply Coding Style
 
-on: [push]
+on: [pull_request]
 
 jobs:
   php-cs-fixer:
@@ -17,7 +17,7 @@ jobs:
       - name: Run PHP CS Fixer
         uses: docker://oskarstark/php-cs-fixer-ga
         with:
-          args: --config=style.php --allow-risky=yes
+          args: --config=style.php --allow-risky=yes --no-cache
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
