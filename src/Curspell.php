@@ -70,7 +70,7 @@ final class Curspell
         $config = new Configuration($this->code, $this->locale);
 
         $numberFormatter = new NumberFormatter($this->locale, NumberFormatter::SPELLOUT);
-    
+
         if ($base !== 0.0) {
             $result = $numberFormatter->format($base) . ' ' . $config->getBase($base);
             // A scenario may occur where the base is 0 but the fraction exist. (Eg. $0.2)
@@ -84,7 +84,7 @@ final class Curspell
             $fraction = round($fraction, $this->getPrecision($subunit)) * $subunit;
             $result .= $conjunction . $numberFormatter->format($fraction)  . ' ' . $config->getFraction($fraction);
         }
-        
+
         return $result;
     }
 
