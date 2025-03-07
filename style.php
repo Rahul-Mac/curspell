@@ -1,5 +1,5 @@
 <?php
- 
+
 $finder = Symfony\Component\Finder\Finder::create()
     ->in([
         __DIR__,
@@ -7,7 +7,7 @@ $finder = Symfony\Component\Finder\Finder::create()
     ->name('*.php')
     ->ignoreDotFiles(true)
     ->ignoreVCS(true);
- 
+
 return (new PhpCsFixer\Config())
     ->setRules([
         '@PSR2' => true,

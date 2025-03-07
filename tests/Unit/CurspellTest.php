@@ -2,10 +2,10 @@
 
 namespace Rahulmac\Curspell\Tests\Unit;
 
-use ReflectionClass;
 use Rahulmac\Curspell\Curspell;
-use Rahulmac\Curspell\Tests\TestCase;
 use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
+use Rahulmac\Curspell\Tests\TestCase;
+use ReflectionClass;
 
 final class CurspellTest extends TestCase
 {
@@ -64,7 +64,7 @@ final class CurspellTest extends TestCase
     }
 
     public function testSpellDifferentCurrencyandLocale(): void
-    {        
+    {
         $this->assertEquals('ninety-nine pounds and ninety-nine pence', $this->curspell->setCode('GBP')->setLocale('en_GB')->spell(99.99));
     }
 
@@ -77,7 +77,7 @@ final class CurspellTest extends TestCase
     {
         $this->expectException(UnknownCurrencyCodeException::class);
 
-        $this->curspell->setCode('ABC')->spell(100);    
+        $this->curspell->setCode('ABC')->spell(100);
     }
 
     public function testSpellWithDifferentSubunit(): void

@@ -2,16 +2,16 @@
 
 namespace Rahulmac\Curspell\Config;
 
-use Rahulmac\Curspell\Exceptions\UnknownLocaleException;
 use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
+use Rahulmac\Curspell\Exceptions\UnknownLocaleException;
 
 /**
  * Configuration
- * 
+ *
  * @author Rahul Mac <rahulmacwan14@gmail.com>
- * 
+ *
  * @copyright (c) 2025
- * 
+ *
  * @license https://opensource.org/licenses/MIT MIT License
  */
 final class Configuration
@@ -23,7 +23,7 @@ final class Configuration
 
     /**
      * Create a new instance of Configuration
-     * 
+     *
      * @throws UnknownCurrencyCodeException If the given code if not supported or is invalid
      * @throws UnknownLocaleException If the given locale if not supported or is invalid
      */
@@ -81,4 +81,3 @@ final class Configuration
         return key_exists('subunit', $this->currency) ? $this->currency['subunit'] : 100;
     }
 }
-
