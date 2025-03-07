@@ -5,6 +5,8 @@ on: [push]
 jobs:
   php-cs-fixer:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout code
@@ -21,6 +23,5 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Fix styling
-          push_options: "--force"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
