@@ -4,16 +4,16 @@ namespace Rahulmac\Curspell;
 
 use NumberFormatter;
 use Rahulmac\Curspell\Config\Configuration;
-use Rahulmac\Curspell\Exceptions\UnknownLocaleException;
 use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
+use Rahulmac\Curspell\Exceptions\UnknownLocaleException;
 
 /**
  * Currency Speller
- * 
+ *
  * @author Rahul Mac <rahulmacwan14@gmail.com>
- * 
+ *
  * @copyright (c) 2025
- * 
+ *
  * @license https://opensource.org/licenses/MIT MIT License
  */
 final class Curspell
@@ -50,7 +50,7 @@ final class Curspell
 
     /**
      * Spell the amount
-     * 
+     *
      * @throws UnknownCurrencyCodeException If the currency code is invalid or unsupported
      * @throws UnknownLocaleException If the locale is invalid or unsupported
      */
@@ -70,11 +70,11 @@ final class Curspell
         $config = new Configuration($this->code, $this->locale);
 
         $numberFormatter = new NumberFormatter($this->locale, NumberFormatter::SPELLOUT);
-    
+
         if ($base !== 0.0) {
             $result = $numberFormatter->format($base) . ' ' . $config->getBase($base);
             // A scenario may occur where the base is 0 but the fraction exist. (Eg. $0.2)
-            // If we render the conjunction while spelling the fraction it will display 
+            // If we render the conjunction while spelling the fraction it will display
             // "and twenty cents" which is incorrect. It should be "twenty cents".
             $conjunction = ' ' . $config->getConjunction() . ' ';
         }
@@ -84,15 +84,15 @@ final class Curspell
             $fraction = round($fraction, $this->getPrecision($subunit)) * $subunit;
             $result .= $conjunction . $numberFormatter->format($fraction)  . ' ' . $config->getFraction($fraction);
         }
-        
+
         return $result;
     }
 
     /**
      * Return the number of digits to round to based on the subunit.
-     * 
+     *
      * The precision should be one less than the number of digits of the subunit
-     * 
+     *
      * Eg: A subunit of 100 should have a precision of 2.
      */
     private function getPrecision(int $subunit): int

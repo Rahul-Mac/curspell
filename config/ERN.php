@@ -1,13 +1,14 @@
 <?php
 
 /**
- * Bermudian Dollar Map
+ * Eritrean Nakfa Map
  */
 return [
+    'subunit' => 100,
     'en' => [
         'base' => [
-            'singular' => 'dollar',
-            'plural' => 'dollars',
+            'singular' => 'nakfa',
+            'plural' => 'nakfas',
         ],
         'fraction' => [
             'singular' => 'cent',
