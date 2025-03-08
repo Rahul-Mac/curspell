@@ -13,5 +13,9 @@ return (new PhpCsFixer\Config())
         '@PSR12' => true,
         'strict_param' => true,
         'array_syntax' => ['syntax' => 'short'],
+        'ordered_imports' => [
+            'sort_algorithm' => 'length',
+            'imports_order' => ['const', 'class', 'function'],
+        ],
     ])
     ->setFinder($finder);
