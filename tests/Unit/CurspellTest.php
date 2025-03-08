@@ -2,10 +2,10 @@
 
 namespace Rahulmac\Curspell\Tests\Unit;
 
-use Rahulmac\Curspell\Curspell;
-use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
-use Rahulmac\Curspell\Tests\TestCase;
 use ReflectionClass;
+use Rahulmac\Curspell\Curspell;
+use Rahulmac\Curspell\Tests\TestCase;
+use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
 
 final class CurspellTest extends TestCase
 {

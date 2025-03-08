@@ -2,8 +2,8 @@
 
 namespace Rahulmac\Curspell\Config;
 
-use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
 use Rahulmac\Curspell\Exceptions\UnknownLocaleException;
+use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
 
 /**
  * Configuration
@@ -78,7 +78,7 @@ final class Configuration
 
     /**
      * Return the subunit of the currency
-     * 
+     *
      * This represents the number of units that consist of a single base unit
      */
     public function getSubunit(): int
