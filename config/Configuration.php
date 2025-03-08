@@ -76,6 +76,11 @@ final class Configuration
         return $this->currency[$this->locale]['conjunction'];
     }
 
+    /**
+     * Return the subunit of the currency
+     *
+     * This represents the number of units that consist of a single base unit
+     */
     public function getSubunit(): int
     {
         return key_exists('subunit', $this->currency) ? $this->currency['subunit'] : 100;
