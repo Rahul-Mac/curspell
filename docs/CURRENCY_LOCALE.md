@@ -52,5 +52,10 @@ As of now, the currency amounts can be spelt in the English language only. So th
 | Fijian Dollar                           | FJD      | `en`      |
 | Falkland Islands Pound                  | FKP      | `en`      |
 | Pound Sterling                          | GBP      | `en_GB`   |
+| Georgian Lari                           | GEL      | `en`      |
+| Ghanaian Cedi                           | GHS      | `en`      |
+| Gibraltar Pound	                      | GIP      | `en`      |
+| Gambian Dalasi                          | GMD      | `en`      |
+| Guinean Franc                           | GNF      | `en`      |
 | Indian Rupee                            | INR      | `en_IN`   |
 | United States Dollar                    | USD      | `en_US`   |
