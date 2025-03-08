@@ -4,8 +4,8 @@ namespace Rahulmac\Curspell;
 
 use NumberFormatter;
 use Rahulmac\Curspell\Config\Configuration;
-use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
 use Rahulmac\Curspell\Exceptions\UnknownLocaleException;
+use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
 
 /**
  * Currency Speller
