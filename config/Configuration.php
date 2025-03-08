@@ -2,8 +2,8 @@
 
 namespace Rahulmac\Curspell\Config;
 
-use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
 use Rahulmac\Curspell\Exceptions\UnknownLocaleException;
+use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
 
 /**
  * Configuration

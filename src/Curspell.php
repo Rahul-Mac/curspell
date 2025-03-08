@@ -3,8 +3,8 @@
 namespace Rahulmac\Curspell;
 
 use Rahulmac\Curspell\Config\Configuration;
-use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
 use Rahulmac\Curspell\Exceptions\UnknownLocaleException;
+use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
 
 /**
  * Currency Speller
