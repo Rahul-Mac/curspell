@@ -47,7 +47,10 @@ As of now, the currency amounts can be spelt in the English language only. So th
 | Algerian Dinar                          | DZD      | `en`      |
 | Egyptian Pound                          | EGP      | `en`      |
 | Eritrean Nakfa                          | ERN      | `en`      |
+| Ethiopian Birr                          | ETB      | `en`      |
 | Euro                                    | EUR      | `en`      |
+| Fijian Dollar                           | FJD      | `en`      |
+| Falkland Islands Pound                  | FKP      | `en`      |
 | Pound Sterling                          | GBP      | `en_GB`   |
 | Indian Rupee                            | INR      | `en_IN`   |
 | United States Dollar                    | USD      | `en_US`   |
