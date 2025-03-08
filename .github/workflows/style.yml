@@ -1,9 +1,6 @@
 name: Apply Coding Style
 
-on:
-  push:
-    branches:
-      - main
+on: [pull_request]
 
 jobs:
   php-cs-fixer:
