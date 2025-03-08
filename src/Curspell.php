@@ -2,7 +2,6 @@
 
 namespace Rahulmac\Curspell;
 
-use NumberFormatter;
 use Rahulmac\Curspell\Config\Configuration;
 use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
 use Rahulmac\Curspell\Exceptions\UnknownLocaleException;
@@ -51,11 +50,16 @@ final class Curspell
     /**
      * Spell the amount
      *
-     * @throws UnknownCurrencyCodeException If the currency code is invalid or unsupported
      * @throws UnknownLocaleException If the locale is invalid or unsupported
+     * @throws \InvalidArgumentException If the amount is not numeric
+     * @throws UnknownCurrencyCodeException If the currency code is invalid or unsupported
      */
     public function spell(mixed $amount): string
     {
+        if (! is_numeric($amount)) {
+            throw new \InvalidArgumentException('The given amount is not numeric');
+        }
+
         $amount = floatval($amount);
         $result = $conjunction = '';
 
@@ -69,7 +73,7 @@ final class Curspell
 
         $config = new Configuration($this->code, $this->locale);
 
-        $numberFormatter = new NumberFormatter($this->locale, NumberFormatter::SPELLOUT);
+        $numberFormatter = new \NumberFormatter($this->locale, \NumberFormatter::SPELLOUT);
 
         if ($base !== 0.0) {
             $result = $numberFormatter->format($base) . ' ' . $config->getBase($base);
