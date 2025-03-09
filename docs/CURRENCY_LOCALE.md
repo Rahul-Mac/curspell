@@ -57,5 +57,13 @@ As of now, the currency amounts can be spelt in the English language only. So th
 | Gibraltar Pound	                      | GIP      | `en`      |
 | Gambian Dalasi                          | GMD      | `en`      |
 | Guinean Franc                           | GNF      | `en`      |
+| Guatemalan Quetzal                      | GTQ      | `en`      |
+| Guyanese Dollar                         | GYD      | `en`      |
+| Hong Kong Dollar                        | HKD      | `en`      |
+| Honduran Lempira                        | HNL      | `en`      |
+| Haitian Gourde	                      | HTG      | `en`      |
+| Hungarian Forint	                      | HUF      | `en`      |
+| Indonesian Rupiah                       | IDR      | `en`      |
+| Israeli New Shekel                      | ILS      | `en`      |
 | Indian Rupee                            | INR      | `en_IN`   |
 | United States Dollar                    | USD      | `en_US`   |
