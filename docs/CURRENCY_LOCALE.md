@@ -66,4 +66,10 @@ As of now, the currency amounts can be spelt in the English language only. So th
 | Indonesian Rupiah                       | IDR      | `en`      |
 | Israeli New Shekel                      | ILS      | `en`      |
 | Indian Rupee                            | INR      | `en_IN`   |
+| Iraqi Dinar	                          | IQD      | `en`      |
+| Iranian Rial                            | IRR      | `en`      |
+| Icelandic Króna                         | ISK      | `en`      |
+| Jamaican Dollar                         | JMD      | `en`      |
+| Jordanian Dinar	                      | JOD      | `en`      |
+| Japanese Yen	                          | JPY      | `en`      |
 | United States Dollar                    | USD      | `en_US`   |
