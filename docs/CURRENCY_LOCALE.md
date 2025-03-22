@@ -72,4 +72,10 @@ As of now, the currency amounts can be spelt in the English language only. So th
 | Jamaican Dollar                         | JMD      | `en`      |
 | Jordanian Dinar	                      | JOD      | `en`      |
 | Japanese Yen	                          | JPY      | `en`      |
+| Kenyan Shilling	                      | KES      | `en`      |
+| Kyrgyz Som	                          | KGS      | `en`      |
+| Cambodian Riel	                      | KHR      | `en`      |
+| Comorian Franc	                      | KMF      | `en`      |
+| North Korean Won	                      | KPW      | `en`      |
+| South Korean Won	                      | KRW      | `en`      |
 | United States Dollar                    | USD      | `en_US`   |
