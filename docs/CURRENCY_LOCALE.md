@@ -83,4 +83,9 @@ As of now, the currency amounts can be spelt in the English language only. So th
 | Kazakhstani Tenge                       | KZT      | `en`      |
 | Lao Kip           	                  | LAK      | `en`      |
 | Lebanese Pound    	                  | LBP      | `en`      |
+| Sri Lankan Rupee    	                  | LKR      | `en`      |
+| Liberian Dollar    	                  | LRD      | `en`      |
+| Lesotho Loti    	                      | LSL      | `en`      |
+| Libyan Dinar         	                  | LYD      | `en`      |
+| Moroccan Dirham    	                  | MAD      | `en`      |
 | United States Dollar                    | USD      | `en_US`   |
