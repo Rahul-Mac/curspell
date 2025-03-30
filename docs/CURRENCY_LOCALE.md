@@ -78,4 +78,9 @@ As of now, the currency amounts can be spelt in the English language only. So th
 | Comorian Franc	                      | KMF      | `en`      |
 | North Korean Won	                      | KPW      | `en`      |
 | South Korean Won	                      | KRW      | `en`      |
+| Kuwaiti Dinar	                          | KWD      | `en`      |
+| Cayman Islands Dollar	                  | KYD      | `en`      |
+| Kazakhstani Tenge                       | KZT      | `en`      |
+| Lao Kip           	                  | LAK      | `en`      |
+| Lebanese Pound    	                  | LBP      | `en`      |
 | United States Dollar                    | USD      | `en_US`   |

@@ -1,11 +1,11 @@
 <?php
 
 /**
- * United States Dollar Map
+ * Cayman Islands Dollar Map
  */
 return [
     'subunit' => 100,
-    'en_US' => [
+    'en' => [
         'base' => [
             'singular' => 'dollar',
             'plural' => 'dollars',
