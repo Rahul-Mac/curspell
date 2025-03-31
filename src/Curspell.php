@@ -7,7 +7,7 @@ use Rahulmac\Curspell\Exceptions\UnknownLocaleException;
 use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
 
 /**
- * Currency Speller
+ * The Currency Speller.
  *
  * @author Rahul Mac <rahulmacwan14@gmail.com>
  *
@@ -18,17 +18,17 @@ use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
 final class Curspell
 {
     /**
-     * The currency code
+     * The currency code.
      */
     private string $code = 'USD';
 
     /**
-     * Locale
+     * The locale.
      */
     private string $locale = 'en_US';
 
     /**
-     * Set the currency code
+     * Set the currency code.
      */
     public function setCode(string $code): self
     {
@@ -38,7 +38,7 @@ final class Curspell
     }
 
     /**
-     * Set the locale
+     * Set the locale.
      */
     public function setLocale(string $locale): self
     {
@@ -48,7 +48,7 @@ final class Curspell
     }
 
     /**
-     * Spell the amount
+     * Spell the amount.
      *
      * @throws UnknownLocaleException If the locale is invalid or unsupported
      * @throws \InvalidArgumentException If the amount is not numeric
@@ -56,20 +56,20 @@ final class Curspell
      */
     public function spell(mixed $amount): string
     {
-        if (! is_numeric($amount)) {
+        if (! \is_numeric($amount)) {
             throw new \InvalidArgumentException('The given amount is not numeric');
         }
 
-        $amount = floatval($amount);
+        $amount = \floatval($amount);
         $result = $conjunction = '';
 
         if ($amount === 0.0) {
             return $result;
         }
 
-        $base = $amount < 0 ? ceil($amount) : floor($amount);
+        $base = $amount < 0 ? \ceil($amount) : \floor($amount);
         // Return the absolute value as the sign of the fraction doesn't matter
-        $fraction = abs($amount - $base);
+        $fraction = \abs($amount - $base);
 
         $config = new Configuration($this->code, $this->locale);
 
@@ -85,7 +85,7 @@ final class Curspell
 
         if ($fraction !== 0.0) {
             $subunit = $config->getSubunit();
-            $fraction = round($fraction, $this->getPrecision($subunit)) * $subunit;
+            $fraction = \round($fraction, $this->getPrecision($subunit)) * $subunit;
             $result .= $conjunction . $numberFormatter->format($fraction)  . ' ' . $config->getFraction($fraction);
         }
 
@@ -95,12 +95,12 @@ final class Curspell
     /**
      * Return the number of digits to round to based on the subunit.
      *
-     * The precision should be one less than the number of digits of the subunit
+     * The precision should be one less than the number of digits of the subunit.
      *
      * Eg: A subunit of 100 should have a precision of 2.
      */
     private function getPrecision(int $subunit): int
     {
-        return $subunit !== 0 ? floor(log10($subunit)) : 0;
+        return $subunit !== 0 ? \floor(\log10($subunit)) : 0;
     }
 }

@@ -6,7 +6,7 @@ use Rahulmac\Curspell\Exceptions\UnknownLocaleException;
 use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
 
 /**
- * Configuration
+ * The Configuration.
  *
  * @author Rahul Mac <rahulmacwan14@gmail.com>
  *
@@ -17,15 +17,15 @@ use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
 final class Configuration
 {
     /**
-     * Map of currency and the associated base and fraction units
+     * Map of currency and the associated base and fraction units.
      */
     private array $currency = [];
 
     /**
-     * Create a new instance of Configuration
+     * Create a new instance of Configuration.
      *
-     * @throws UnknownCurrencyCodeException If the given code if not supported or is invalid
-     * @throws UnknownLocaleException If the given locale if not supported or is invalid
+     * @throws UnknownCurrencyCodeException If the given code if not supported or is invalid.
+     * @throws UnknownLocaleException If the given locale if not supported or is invalid.
      */
     public function __construct(string $code, private string $locale)
     {
@@ -43,7 +43,7 @@ final class Configuration
     }
 
     /**
-     * Return the base based on the amount
+     * Return the base based on the amount.
      */
     public function getBase(int $amount): string
     {
@@ -51,7 +51,7 @@ final class Configuration
     }
 
     /**
-     * Return the fraction based on the amount
+     * Return the fraction based on the amount.
      */
     public function getFraction(int $amount): string
     {
@@ -59,7 +59,7 @@ final class Configuration
     }
 
     /**
-     * Return the unit value
+     * Return the unit value.
      */
     public function getUnit(int $amount, string $unit): string
     {
@@ -69,7 +69,7 @@ final class Configuration
     }
 
     /**
-     * Return the conjunction for the base and fraction
+     * Return the conjunction for the base and fraction.
      */
     public function getConjunction(): string
     {
@@ -77,9 +77,9 @@ final class Configuration
     }
 
     /**
-     * Return the subunit of the currency
+     * Return the subunit of the currency.
      *
-     * This represents the number of units that consist of a single base unit
+     * This represents the number of units that consist of a single base unit.
      */
     public function getSubunit(): int
     {
