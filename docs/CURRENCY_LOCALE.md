@@ -88,4 +88,9 @@ As of now, the currency amounts can be spelt in the English language only. So th
 | Lesotho Loti    	                      | LSL      | `en`      |
 | Libyan Dinar         	                  | LYD      | `en`      |
 | Moroccan Dirham    	                  | MAD      | `en`      |
+| Moldovan Leu      	                  | MDL      | `en`      |
+| Malagasy Ariary    	                  | MGA      | `en`      |
+| Macedonian Denar    	                  | MKD      | `en`      |
+| Burmese Kyat      	                  | MMK      | `en`      |
+| Mongolian Tögrög    	                  | MNT      | `en`      |
 | United States Dollar                    | USD      | `en_US`   |
