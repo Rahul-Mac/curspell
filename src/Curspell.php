@@ -50,9 +50,9 @@ final class Curspell
     /**
      * Spell the amount.
      *
-     * @throws UnknownLocaleException If the locale is invalid or unsupported
-     * @throws \InvalidArgumentException If the amount is not numeric
-     * @throws UnknownCurrencyCodeException If the currency code is invalid or unsupported
+     * @throws UnknownLocaleException If the locale is invalid or unsupported.
+     * @throws \InvalidArgumentException If the amount is not numeric.
+     * @throws UnknownCurrencyCodeException If the currency code is invalid or unsupported.
      */
     public function spell(mixed $amount): string
     {
@@ -68,7 +68,8 @@ final class Curspell
         }
 
         $base = $amount < 0 ? \ceil($amount) : \floor($amount);
-        // Return the absolute value as the sign of the fraction doesn't matter
+
+        // Return the absolute value as the sign of the fraction doesn't matter.
         $fraction = \abs($amount - $base);
 
         $config = new Configuration($this->code, $this->locale);

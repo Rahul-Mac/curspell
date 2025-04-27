@@ -93,4 +93,9 @@ As of now, the currency amounts can be spelt in the English language only. So th
 | Macedonian Denar    	                  | MKD      | `en`      |
 | Burmese Kyat      	                  | MMK      | `en`      |
 | Mongolian Tögrög    	                  | MNT      | `en`      |
+| Macanese Pataca	    	              | MOP      | `en`      |
+| Mauritanian Ouguiya   	              | MRU      | `en`      |
+| Mauritian Rupee    	                  | MUR      | `en`      |
+| Maldivian Rufiyaa    	                  | MVR      | `en`      |
+| Malawian Kwacha    	                  | MWK      | `en`      |
 | United States Dollar                    | USD      | `en_US`   |
