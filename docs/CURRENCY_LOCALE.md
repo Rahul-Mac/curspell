@@ -1,6 +1,6 @@
 # Supported Currencies and their Locales for Curspell
 
-As of now, the currency amounts can be spelt in the English language only. So the locale `en` will be used. 
+As of now, the currency amounts can be spelled only in the English language. So the locale `en` will be used. 
 
 > If a specific variant of English is used in the country (eg. Indian English in India) then we recommend using the apt locale (eg. `en_IN` instead of `en`).
 
@@ -98,4 +98,9 @@ As of now, the currency amounts can be spelt in the English language only. So th
 | Mauritian Rupee    	                  | MUR      | `en`      |
 | Maldivian Rufiyaa    	                  | MVR      | `en`      |
 | Malawian Kwacha    	                  | MWK      | `en`      |
+| Mexican Peso         	                  | MXN      | `en`      |
+| Malaysian Ringgit    	                  | MYR      | `en`      |
+| Mozambican Metical    	              | MZN      | `en`      |
+| Namibian Dollar    	                  | NAD      | `en`      |
+| Nigerian Naira    	                  | NGN      | `en`      |
 | United States Dollar                    | USD      | `en_US`   |
