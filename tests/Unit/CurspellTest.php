@@ -41,7 +41,7 @@ final class CurspellTest extends TestCase
 
     public function testSpellWholeNumber(): void
     {
-        $this->assertEquals('one hundred twenty-three dollars', $this->curspell->setCode('USD')->setLocale('en_US')->spell(123));
+        $this->assertEquals('ten dollars', $this->curspell->setCode('USD')->setLocale('en_US')->spell(10));
     }
 
     public function testSpellWithFraction(): void
@@ -54,6 +54,16 @@ final class CurspellTest extends TestCase
         $this->assertEquals('one hundred twenty-three dollars', $this->curspell->setCode('USD')->setLocale('en_US')->spell(123.00));
     }
 
+    public function testSpellWithFractionBeyondPrecisionRoundUp(): void
+    {
+        $this->assertEquals('twenty dollars and fifty-one cents', $this->curspell->setCode('USD')->setLocale('en_US')->spell(20.508));
+    }
+
+    public function testSpellWithFractionBeyondPrecisionRoundDown(): void
+    {
+        $this->assertEquals('twenty dollars and fifty cents', $this->curspell->setCode('USD')->setLocale('en_US')->spell(20.503));
+    }
+
     public function testSpellWithZeroBase(): void
     {
         $this->assertEquals('twelve paise', $this->curspell->setCode('INR')->setLocale('en_IN')->spell(0.12));
@@ -61,7 +71,7 @@ final class CurspellTest extends TestCase
 
     public function testSpellNegativeAmount(): void
     {
-        $this->assertEquals('minus one hundred twenty-three dollars and forty-five cents', $this->curspell->setCode('USD')->setLocale('en_US')->spell(-123.45));
+        $this->assertEquals('minus one hundred twenty-three dollars and seventy-seven cents', $this->curspell->setCode('USD')->setLocale('en_US')->spell(-123.77));
     }
 
     public function testSpellDifferentCurrencyandLocale(): void
@@ -98,5 +108,10 @@ final class CurspellTest extends TestCase
         $this->expectException(\InvalidArgumentException::class);
 
         $this->curspell->setCode('USD')->setLocale('en_US')->spell([123]);
+    }
+
+    public function testSpellWithNonDecimalSubunit(): void
+    {
+        $this->assertEquals('four ouguiya and one khoums', $this->curspell->setCode('MRU')->setLocale('en')->spell(4.2));
     }
 }

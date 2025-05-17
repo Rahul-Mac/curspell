@@ -60,48 +60,80 @@ final class Curspell
             throw new \InvalidArgumentException('The given amount is not numeric');
         }
 
-        $amount = \floatval($amount);
-        $result = $conjunction = '';
-
-        if ($amount === 0.0) {
-            return $result;
-        }
-
-        $base = $amount < 0 ? \ceil($amount) : \floor($amount);
-
-        // Return the absolute value as the sign of the fraction doesn't matter.
-        $fraction = \abs($amount - $base);
+        $amount = (string) $amount;
+        $isNegative = \bccomp($amount, '0', 10) < 0;
+        $absAmount = \ltrim($amount, '-');
 
         $config = new Configuration($this->code, $this->locale);
-
+        $subunit = $config->getSubunit();
         $numberFormatter = new \NumberFormatter($this->locale, \NumberFormatter::SPELLOUT);
 
-        if ($base !== 0.0) {
-            $result = $numberFormatter->format($base) . ' ' . $config->getBase($base);
-            // A scenario may occur where the base is 0 but the fraction exist. (Eg. $0.2)
-            // If we render the conjunction while spelling the fraction it will display
-            // "and twenty cents" which is incorrect. It should be "twenty cents".
-            $conjunction = ' ' . $config->getConjunction() . ' ';
+        $precision = $this->getPrecision($subunit);
+        $rounded = $this->bcround($absAmount, $precision);
+        $amountInSubunits = \bcmul($rounded, (string) $subunit, 0);
+
+        $base = \bcdiv($amountInSubunits, (string) $subunit, 0);
+        $fraction = \bcmod($amountInSubunits, (string) $subunit);
+
+        $parts = [];
+
+        if ($isNegative) {
+            $parts[] = 'minus';
         }
 
-        if ($fraction !== 0.0) {
-            $subunit = $config->getSubunit();
-            $fraction = \round($fraction, $this->getPrecision($subunit)) * $subunit;
-            $result .= $conjunction . $numberFormatter->format($fraction)  . ' ' . $config->getFraction($fraction);
+        if ((int) $base > 0) {
+            $baseWord = $numberFormatter->format((int) $base);
+            $parts[] = $baseWord . ' ' . $config->getBase((int) $base);
         }
 
-        return $result;
+        if ((int) $fraction > 0) {
+            $fractionWord = $numberFormatter->format((int) $fraction);
+            $fractionText = $fractionWord . ' ' . $config->getFraction((int) $fraction);
+
+            if ((int) $base > 0) {
+                $parts[] = $config->getConjunction();
+            }
+
+            $parts[] = $fractionText;
+        }
+
+        return \implode(' ', $parts);
     }
 
     /**
      * Return the number of digits to round to based on the subunit.
-     *
-     * The precision should be one less than the number of digits of the subunit.
-     *
-     * Eg: A subunit of 100 should have a precision of 2.
      */
     private function getPrecision(int $subunit): int
     {
-        return $subunit !== 0 ? \floor(\log10($subunit)) : 0;
+        if ($subunit <= 0) {
+            return 0;
+        }
+
+        $fraction = \bcdiv('1', (string) $subunit, 10);
+        $decimal = \rtrim($fraction, '0');
+        $pos = \strpos($decimal, '.');
+
+        return $pos !== false ? \strlen($decimal) - $pos - 1 : 0;
+    }
+
+    /**
+     * Round a BCMath number to a given precision (half-up).
+     */
+    private function bcround(string $number, int $precision): string
+    {
+        if ($precision < 0) {
+            throw new \InvalidArgumentException('Precision must be non-negative');
+        }
+
+        $factor = \bcpow('10', (string) ($precision + 1));
+        $scaled = \bcmul($number, $factor, 0);
+        $lastDigit = (int) \substr($scaled, -1);
+        $truncated = \bcdiv($scaled, '10', 0);
+
+        if ($lastDigit >= 5) {
+            $truncated = \bcadd($truncated, '1');
+        }
+
+        return \bcdiv($truncated, \bcpow('10', (string) $precision), $precision);
     }
 }
