@@ -103,4 +103,9 @@ As of now, the currency amounts can be spelled only in the English language. So 
 | Mozambican Metical    	              | MZN      | `en`      |
 | Namibian Dollar    	                  | NAD      | `en`      |
 | Nigerian Naira    	                  | NGN      | `en`      |
+| Nicaraguan Córdoba        	          | NIO      | `en`      |
+| Nigerian Naira    	                  | NGN      | `en`      |
+| Nigerian Naira    	                  | NGN      | `en`      |
+| Nigerian Naira    	                  | NGN      | `en`      |
+| Nigerian Naira    	                  | NGN      | `en`      |
 | United States Dollar                    | USD      | `en_US`   |

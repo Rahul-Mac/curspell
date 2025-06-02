@@ -3,7 +3,7 @@
 namespace Rahulmac\Curspell\Exceptions;
 
 /**
- * Exception for unspported or invalid currency code.
+ * Exception for unsupported or invalid currency code.
  *
  * @author Rahul Mac <rahulmacwan14@gmail.com>
  *

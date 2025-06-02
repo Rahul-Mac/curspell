@@ -69,10 +69,10 @@ final class Curspell
         $numberFormatter = new \NumberFormatter($this->locale, \NumberFormatter::SPELLOUT);
 
         $precision = $this->getPrecision($subunit);
-        $rounded = $this->bcround($absAmount, $precision);
+        $rounded = $this->round($absAmount, $precision);
         $amountInSubunits = \bcmul($rounded, (string) $subunit, 0);
 
-        $base = \bcdiv($amountInSubunits, (string) $subunit, 0);
+        $base = \bcdiv($amountInSubunits, (string) $subunit);
         $fraction = \bcmod($amountInSubunits, (string) $subunit);
 
         $parts = [];
@@ -119,7 +119,7 @@ final class Curspell
     /**
      * Round a BCMath number to a given precision (half-up).
      */
-    private function bcround(string $number, int $precision): string
+    private function round(string $number, int $precision): string
     {
         if ($precision < 0) {
             throw new \InvalidArgumentException('Precision must be non-negative');
@@ -128,7 +128,7 @@ final class Curspell
         $factor = \bcpow('10', (string) ($precision + 1));
         $scaled = \bcmul($number, $factor, 0);
         $lastDigit = (int) \substr($scaled, -1);
-        $truncated = \bcdiv($scaled, '10', 0);
+        $truncated = \bcdiv($scaled, '10');
 
         if ($lastDigit >= 5) {
             $truncated = \bcadd($truncated, '1');

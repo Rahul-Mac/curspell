@@ -3,7 +3,7 @@
 namespace Rahulmac\Curspell\Exceptions;
 
 /**
- * Exception for unspported or invalid locale
+ * Exception for unsupported or invalid locale
  *
  * @author Rahul Mac <rahulmacwan14@gmail.com>
  *

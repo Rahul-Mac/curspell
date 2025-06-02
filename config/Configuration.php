@@ -31,13 +31,13 @@ final class Configuration
     {
         $file = __DIR__ . "/$code.php";
 
-        if (! file_exists($file)) {
+        if (! \file_exists($file)) {
             throw new UnknownCurrencyCodeException("The following currency code is not supported or is invalid: {$code}");
         }
 
         $this->currency = require $file;
 
-        if (! key_exists($locale, $this->currency)) {
+        if (! \key_exists($locale, $this->currency)) {
             throw new UnknownLocaleException("The following locale is not supported or is invalid: {$locale}");
         }
     }
@@ -83,6 +83,6 @@ final class Configuration
      */
     public function getSubunit(): int
     {
-        return key_exists('subunit', $this->currency) ? $this->currency['subunit'] : 100;
+        return \key_exists('subunit', $this->currency) ? $this->currency['subunit'] : 100;
     }
 }
