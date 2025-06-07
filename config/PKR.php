@@ -1,18 +1,18 @@
 <?php
 
 /**
- * Norwegian Krone Map
+ * Pakistani Rupee Map
  */
 return [
     'subunit' => 100,
     'en' => [
         'base' => [
-            'singular' => 'krone',
-            'plural' => 'kroner',
+            'singular' => 'rupee',
+            'plural' => 'rupees',
         ],
         'fraction' => [
-            'singular' => 'øre',
-            'plural' => 'øre',
+            'singular' => 'paisa',
+            'plural' => 'paise',
         ],
         'conjunction' => 'and',
     ],

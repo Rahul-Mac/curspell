@@ -1,18 +1,18 @@
 <?php
 
 /**
- * Norwegian Krone Map
+ * Philippine Peso Map
  */
 return [
     'subunit' => 100,
     'en' => [
         'base' => [
-            'singular' => 'krone',
-            'plural' => 'kroner',
+            'singular' => 'peso',
+            'plural' => 'pesos',
         ],
         'fraction' => [
-            'singular' => 'øre',
-            'plural' => 'øre',
+            'singular' => 'sentimo',
+            'plural' => 'sentimos',
         ],
         'conjunction' => 'and',
     ],

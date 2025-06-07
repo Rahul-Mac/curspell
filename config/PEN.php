@@ -1,18 +1,18 @@
 <?php
 
 /**
- * Norwegian Krone Map
+ * Peruvian Sol Map
  */
 return [
     'subunit' => 100,
     'en' => [
         'base' => [
-            'singular' => 'krone',
-            'plural' => 'kroner',
+            'singular' => 'sol',
+            'plural' => 'soles',
         ],
         'fraction' => [
-            'singular' => 'øre',
-            'plural' => 'øre',
+            'singular' => 'céntimo',
+            'plural' => 'céntimos',
         ],
         'conjunction' => 'and',
     ],

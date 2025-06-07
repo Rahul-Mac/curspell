@@ -1,18 +1,18 @@
 <?php
 
 /**
- * Norwegian Krone Map
+ * Polish Złoty Map
  */
 return [
     'subunit' => 100,
     'en' => [
         'base' => [
-            'singular' => 'krone',
-            'plural' => 'kroner',
+            'singular' => 'złoty',
+            'plural' => 'złote',
         ],
         'fraction' => [
-            'singular' => 'øre',
-            'plural' => 'øre',
+            'singular' => 'grosz',
+            'plural' => 'grosze',
         ],
         'conjunction' => 'and',
     ],

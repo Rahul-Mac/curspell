@@ -1,18 +1,18 @@
 <?php
 
 /**
- * Norwegian Krone Map
+ * Papua New Guinean Kina Map
  */
 return [
     'subunit' => 100,
     'en' => [
         'base' => [
-            'singular' => 'krone',
-            'plural' => 'kroner',
+            'singular' => 'kina',
+            'plural' => 'kina',
         ],
         'fraction' => [
-            'singular' => 'øre',
-            'plural' => 'øre',
+            'singular' => 'toea',
+            'plural' => 'toea',
         ],
         'conjunction' => 'and',
     ],
