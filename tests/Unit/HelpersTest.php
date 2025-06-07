@@ -2,9 +2,9 @@
 
 namespace Rahulmac\Curspell\Tests\Unit;
 
-use Rahulmac\Curspell\Tests\TestCase;
-
 use function Rahulmac\Curspell\Support\curspell;
+
+use Rahulmac\Curspell\Tests\TestCase;
 
 class HelpersTest extends TestCase
 {
