@@ -2,8 +2,8 @@
 
 namespace Rahulmac\Curspell\Config;
 
-use Rahulmac\Curspell\Exceptions\UnknownLocaleException;
 use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
+use Rahulmac\Curspell\Exceptions\UnknownLocaleException;
 
 /**
  * The Configuration.
@@ -25,7 +25,7 @@ final class Configuration
      * Create a new instance of Configuration.
      *
      * @throws UnknownCurrencyCodeException If the given code if not supported or is invalid.
-     * @throws UnknownLocaleException If the given locale if not supported or is invalid.
+     * @throws UnknownLocaleException       If the given locale if not supported or is invalid.
      */
     public function __construct(string $code, private string $locale)
     {

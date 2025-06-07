@@ -2,11 +2,11 @@
 
 namespace Rahulmac\Curspell\Tests\Unit;
 
-use ReflectionClass;
 use Rahulmac\Curspell\Curspell;
-use Rahulmac\Curspell\Tests\TestCase;
-use Rahulmac\Curspell\Exceptions\UnknownLocaleException;
 use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
+use Rahulmac\Curspell\Exceptions\UnknownLocaleException;
+use Rahulmac\Curspell\Tests\TestCase;
+use ReflectionClass;
 
 final class CurspellTest extends TestCase
 {

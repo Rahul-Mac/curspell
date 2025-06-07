@@ -3,8 +3,8 @@
 namespace Rahulmac\Curspell;
 
 use Rahulmac\Curspell\Config\Configuration;
-use Rahulmac\Curspell\Exceptions\UnknownLocaleException;
 use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
+use Rahulmac\Curspell\Exceptions\UnknownLocaleException;
 
 /**
  * The Currency Speller.
@@ -50,8 +50,8 @@ final class Curspell
     /**
      * Spell the amount.
      *
-     * @throws UnknownLocaleException If the locale is invalid or unsupported.
-     * @throws \InvalidArgumentException If the amount is not numeric.
+     * @throws UnknownLocaleException       If the locale is invalid or unsupported.
+     * @throws \InvalidArgumentException    If the amount is not numeric.
      * @throws UnknownCurrencyCodeException If the currency code is invalid or unsupported.
      */
     public function spell(mixed $amount): string

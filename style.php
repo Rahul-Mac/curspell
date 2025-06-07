@@ -36,6 +36,6 @@ return (new PhpCsFixer\Config())
         'single_trait_insert_per_statement' => true,
         'phpdoc_align' => [
             'align' => 'vertical',
-        ]
+        ],
     ])
     ->setFinder($finder);
