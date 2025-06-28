@@ -1,8 +1,9 @@
 # Supported Currencies and their Locales for Curspell
 
-As of now, the currency amounts can be spelled only in the English language. So the locale `en` will be used. 
+As of now, the currency amounts can be spelled only in the English language. So the locale `en` will be used.
 
-> If a specific variant of English is used in the country (e.g. Indian English in India) then we recommend using the apt locale (e.g. `en_IN` instead of `en`).
+> If a specific variant of English is used in the country (e.g. Indian English in India) then we recommend using the apt
+> locale (e.g. `en_IN` instead of `en`).
 
 | Name                                    | ISO Code | Locales |
 |-----------------------------------------|----------|---------|
@@ -115,4 +116,9 @@ As of now, the currency amounts can be spelled only in the English language. So 
 | Pakistani Rupee   	                     | PKR      | `en`    |
 | Polish Złoty   	                        | PLN      | `en`    |
 | Paraguayan Guaraní   	                  | PYG      | `en`    |
+| Qatari Riyal   	                        | QAR      | `en`    |
+| Romanian Leu   	                        | RON      | `en`    |
+| Serbian Dinar   	                       | RSD      | `en`    |
+| Russian Ruble   	                       | RUB      | `en`    |
+| Rwandan Franc                           | RWF      | `en`    |
 | United States Dollar                    | USD      | `en_US` |
