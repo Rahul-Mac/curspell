@@ -4,6 +4,7 @@ namespace Rahulmac\Curspell\Tests\Unit;
 
 use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
 use Rahulmac\Curspell\Exceptions\UnknownLocaleException;
+
 use function Rahulmac\Curspell\Support\curspell;
 
 use Rahulmac\Curspell\Tests\TestCase;
