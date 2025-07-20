@@ -17,11 +17,7 @@ class HelpersTest extends TestCase
      */
     public function testSpellAmountWithDefaultCurrencyAndLocale()
     {
-        $amount = 1234.56;
-        $result = curspell($amount);
-
-        // Assuming the expected result in USD is "one thousand two hundred thirty-four dollars and fifty-six cents"
-        $this->assertEquals("one thousand two hundred thirty-four dollars and fifty-six cents", $result);
+        $this->assertEquals("one thousand two hundred thirty-four dollars and fifty-six cents", curspell(1234.56));
     }
 
     /**
@@ -30,9 +26,9 @@ class HelpersTest extends TestCase
      */
     public function testSpellAmountWithCustomCurrencyCode()
     {
-        $amount = 1234.56;
-        $result = curspell($amount, 'EUR', 'en');
-
-        $this->assertEquals("one thousand two hundred thirty-four euros and fifty-six cents", $result);
+        $this->assertEquals(
+            "one thousand two hundred thirty-four euros and fifty-six cents",
+            curspell(1234.56, 'EUR', 'en'),
+        );
     }
 }

@@ -121,4 +121,11 @@ As of now, the currency amounts can be spelled only in the English language. So 
 | Serbian Dinar   	                       | RSD      | `en`    |
 | Russian Ruble   	                       | RUB      | `en`    |
 | Rwandan Franc                           | RWF      | `en`    |
+| Saudi Riyal                             | SAR      | `en`    |
+| Solomon Islands Dollar                  | SBD      | `en`    |
+| Seychellois Rupee                       | SCR      | `en`    |
+| Sudanese Pound                          | SDG      | `en`    |
+| Swedish Krona                           | SEK      | `en`    |
+| Singapore Dollar                        | SGD      | `en`    |
+| Saint Helena Pound                      | SHP      | `en`    |
 | United States Dollar                    | USD      | `en_US` |

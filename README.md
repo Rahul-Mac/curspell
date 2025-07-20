@@ -1,6 +1,6 @@
-<p><a href="https://packagist.org/packages/rahulmac/curspell" target="_blank"><img src="https://raw.githubusercontent.com/Rahul-Mac/curspell/refs/heads/main/assets/curspell.png" width="400" alt="Curspell Logo"></a></p>
+<p align="center"><a href="https://packagist.org/packages/rahulmac/curspell" target="_blank"><img src="https://raw.githubusercontent.com/Rahul-Mac/curspell/refs/heads/main/assets/curspell.png" width="400" alt="Curspell Logo"></a></p>
 
-<p>
+<p align="center">
 <a href="https://packagist.org/packages/rahulmac/curspell" target="_blank"><img alt="Packagist Version" src="https://img.shields.io/packagist/v/rahulmac/curspell"></a>
 <a href="https://github.com/Rahul-Mac/curspell/blob/main/LICENSE" target="_blank"><img alt="GitHub License" src="https://img.shields.io/github/license/Rahul-Mac/curspell"></a></p>
 
