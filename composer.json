@@ -12,10 +12,7 @@
     "autoload-dev": {
         "psr-4": {
             "Rahulmac\\Curspell\\Tests\\": "tests/"
-        },
-        "files": [
-            "src/Support/helpers.php"
-        ]
+        }
     },
     "authors": [
         {
