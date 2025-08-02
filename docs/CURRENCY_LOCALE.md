@@ -17,7 +17,7 @@ As of now, the currency amounts can be spelled only in the English language. So 
 | Australian Dollar                       | AUD      | `en_AU` |
 | Aruban Florin                           | AWG      | `en`    |
 | Azerbaijani Manat                       | AZN      | `en`    |
-| Bosnia and Herzegovina Convertible Mark | AWG      | `en`    |
+| Bosnia and Herzegovina Convertible Mark | BAM      | `en`    |
 | Barbadian Dollar                        | BBD      | `en`    |
 | Bangladeshi Taka                        | BDT      | `en`    |
 | Bulgarian Lev                           | BGN      | `en`    |
@@ -128,4 +128,10 @@ As of now, the currency amounts can be spelled only in the English language. So 
 | Swedish Krona                           | SEK      | `en`    |
 | Singapore Dollar                        | SGD      | `en`    |
 | Saint Helena Pound                      | SHP      | `en`    |
+| Sierra Leonean Leone                    | SLE      | `en`    |
+| Somali Shilling                         | SOS      | `en`    |
+| Surinamese Dollar                       | SRD      | `en`    |
+| South Sudanese Pound                    | SSP      | `en`    |
+| São Tomé and Príncipe Dobra	            | STN      | `en`    |
+| Syrian Pound	                           | SYP      | `en`    |
 | United States Dollar                    | USD      | `en_US` |

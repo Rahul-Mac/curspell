@@ -32,13 +32,13 @@ final class Configuration
         $file = __DIR__ . "/$code.php";
 
         if (! \file_exists($file)) {
-            throw new UnknownCurrencyCodeException("The following currency code is not supported or is invalid: {$code}");
+            throw new UnknownCurrencyCodeException("The following currency code is not supported or is invalid: $code");
         }
 
         $this->currency = require $file;
 
         if (! \key_exists($locale, $this->currency)) {
-            throw new UnknownLocaleException("The following locale is not supported or is invalid: {$locale}");
+            throw new UnknownLocaleException("The following locale is not supported or is invalid: $locale");
         }
     }
 
