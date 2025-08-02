@@ -134,4 +134,16 @@ As of now, the currency amounts can be spelled only in the English language. So 
 | South Sudanese Pound                    | SSP      | `en`    |
 | São Tomé and Príncipe Dobra	            | STN      | `en`    |
 | Syrian Pound	                           | SYP      | `en`    |
+| Swazi Lilangeni	                        | SZL      | `en`    |
+| Thai Baht	                              | THB      | `en`    |
+| Tajikistani Somoni	                     | TJS      | `en`    |
+| Turkmenistani Manat	                    | TMT      | `en`    |
+| Tunisian Dinar	                         | TND      | `en`    |
+| Tongan Paʻanga	                         | TOP      | `en`    |
+| Turkish Lira	                           | TRY      | `en`    |
+| Trinidad and Tobago Dollar	             | TTD      | `en`    |
+| New Taiwan Dollar	                      | TWD      | `en`    |
+| Tanzanian Shilling	                     | TZS      | `en`    |
+| Ukrainian Hryvnia	                      | UAH      | `en`    |
+| Ugandan Shilling	                       | UGX      | `en`    |
 | United States Dollar                    | USD      | `en_US` |
