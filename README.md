@@ -47,16 +47,6 @@ use Rahulmac\Curspell\Curspell;
 echo (new Curspell())->setCode('INR')->setLocale('en_IN')->spell(123.45);    // one hundred twenty-three rupees and forty-five paise
 ```
 
-## Helper Function
-
-You may choose to use a helper function instead of the object.
-
-```php
-use function Rahulmac\Curspell\Support\curspell;
-
-curspell(12.34, 'GBP', 'en_GB');    // twelve pounds and thirty-four pence
-```
-
 # Supported Currencies
 
 Here is the list of the [currencies](/docs/CURRENCY_LOCALE.md) this package supports.
