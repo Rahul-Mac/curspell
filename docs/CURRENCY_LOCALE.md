@@ -147,3 +147,7 @@ As of now, the currency amounts can be spelled only in the English language. So 
 | Ukrainian Hryvnia	                      | UAH      | `en`    |
 | Ugandan Shilling	                       | UGX      | `en`    |
 | United States Dollar                    | USD      | `en_US` |
+| Uruguayan Peso                          | UYU      | `en`    |
+| Uzbekistani Sum                         | UZS      | `en`    |
+| Venezuelan Digital Bolívar	             | VED      | `en`    |
+| Venezuelan Sovereign Bolívar	           | VES      | `en`    |
