@@ -151,3 +151,15 @@ As of now, the currency amounts can be spelled only in the English language. So 
 | Uzbekistani Sum                         | UZS      | `en`    |
 | Venezuelan Digital Bolívar	             | VED      | `en`    |
 | Venezuelan Sovereign Bolívar	           | VES      | `en`    |
+| Vietnamese Đồng	                        | VND      | `en`    |
+| Vanuatu Vatu	                           | VUV      | `en`    |
+| Samoan Tālā	                            | WST      | `en`    |
+| Central African CFA Franc	              | XAF      | `en`    |
+| Eastern Caribbean Dollar	               | XCD      | `en`    |
+| Caribbean Guilder	                      | XCG      | `en`    |
+| West African CFA Franc	                 | XOF      | `en`    |
+| CFP Franc	                              | XPF      | `en`    |
+| Yemeni Rial	                            | YER      | `en`    |
+| South African Rand	                     | ZAR      | `en`    |
+| Zambian Kwacha	                         | ZMW      | `en`    |
+| Zimbabwe Gold	                          | ZWG      | `en`    |
