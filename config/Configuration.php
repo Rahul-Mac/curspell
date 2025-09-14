@@ -5,25 +5,11 @@ namespace Rahulmac\Curspell\Config;
 use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
 use Rahulmac\Curspell\Exceptions\UnknownLocaleException;
 
-/**
- * The Configuration.
- *
- * @author Rahul Mac <rahulmacwan14@gmail.com>
- *
- * @copyright (c) 2025
- *
- * @license https://opensource.org/licenses/MIT MIT License
- */
 final class Configuration
 {
-    /**
-     * Map of currency and the associated base and fraction units.
-     */
     private array $currency = [];
 
     /**
-     * Create a new instance of Configuration.
-     *
      * @throws UnknownCurrencyCodeException If the given code if not supported or is invalid.
      * @throws UnknownLocaleException       If the given locale if not supported or is invalid.
      */
@@ -42,25 +28,16 @@ final class Configuration
         }
     }
 
-    /**
-     * Return the base based on the amount.
-     */
     public function getBase(int $amount): string
     {
         return $this->getUnit($amount, 'base');
     }
 
-    /**
-     * Return the fraction based on the amount.
-     */
     public function getFraction(int $amount): string
     {
         return $this->getUnit($amount, 'fraction');
     }
 
-    /**
-     * Return the unit value.
-     */
     public function getUnit(int $amount, string $unit): string
     {
         $grammaticalNumber = $amount === 1 ? 'singular' : 'plural';
@@ -68,19 +45,11 @@ final class Configuration
         return $this->currency[$this->locale][$unit][$grammaticalNumber];
     }
 
-    /**
-     * Return the conjunction for the base and fraction.
-     */
     public function getConjunction(): string
     {
         return $this->currency[$this->locale]['conjunction'];
     }
 
-    /**
-     * Return the subunit of the currency.
-     *
-     * This represents the number of units that consist of a single base unit.
-     */
     public function getSubunit(): int
     {
         return \key_exists('subunit', $this->currency) ? $this->currency['subunit'] : 100;

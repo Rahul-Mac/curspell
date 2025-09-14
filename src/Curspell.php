@@ -6,30 +6,12 @@ use Rahulmac\Curspell\Config\Configuration;
 use Rahulmac\Curspell\Exceptions\UnknownCurrencyCodeException;
 use Rahulmac\Curspell\Exceptions\UnknownLocaleException;
 
-/**
- * The Currency Speller.
- *
- * @author Rahul Mac <rahulmacwan14@gmail.com>
- *
- * @copyright (c) 2025
- *
- * @license https://opensource.org/licenses/MIT MIT License
- */
 final class Curspell
 {
-    /**
-     * The currency code.
-     */
     private string $code = 'USD';
 
-    /**
-     * The locale.
-     */
     private string $locale = 'en_US';
 
-    /**
-     * Set the currency code.
-     */
     public function setCode(string $code): self
     {
         $this->code = $code;
@@ -37,9 +19,6 @@ final class Curspell
         return $this;
     }
 
-    /**
-     * Set the locale.
-     */
     public function setLocale(string $locale): self
     {
         $this->locale = $locale;
@@ -48,8 +27,6 @@ final class Curspell
     }
 
     /**
-     * Spell the amount.
-     *
      * @throws UnknownLocaleException       If the locale is invalid or unsupported.
      * @throws \InvalidArgumentException    If the amount is not numeric.
      * @throws UnknownCurrencyCodeException If the currency code is invalid or unsupported.
@@ -100,9 +77,6 @@ final class Curspell
         return \implode(' ', $parts);
     }
 
-    /**
-     * Return the number of digits to round to based on the subunit.
-     */
     private function getPrecision(int $subunit): int
     {
         if ($subunit <= 0) {
@@ -116,9 +90,6 @@ final class Curspell
         return $pos !== false ? \strlen($decimal) - $pos - 1 : 0;
     }
 
-    /**
-     * Round a BCMath number to a given precision (half-up).
-     */
     private function round(string $number, int $precision): string
     {
         if ($precision < 0) {

@@ -19,6 +19,7 @@ composer require rahulmac/curspell
 
 - PHP v8.0+
 - The `intl` extension
+- The `bcmath` extension
 
 # Usage
 
